@@ -1,0 +1,27 @@
+[user]
+  name = Marcos Lamuria
+  email = marcoslamuria@gmail.com
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[alias]
+  d = difftool
+  s = status -s
+  cl = clone
+  ci = commit
+  co = checkout
+  br = branch
+  latest = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
+  l = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%aN>%Creset'
+  unmerged = branch --no-merged
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  active-branches = for-each-ref --sort=committerdate refs/heads/
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  editor = vim
